@@ -28,4 +28,11 @@ public class Library {
             this.books.add(book);
         }
     }
+
+    public void lendBook(Borrower borrower, Book book){
+        if (this.books.contains(book)){
+            this.books.remove(book);
+            borrower.addBook(book);
+        }
+    }
 }
